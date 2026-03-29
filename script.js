@@ -170,10 +170,10 @@ function setupTouchControls() {
 				// Horizontal swipe
 				if (deltaX > 0) {
 					// Swipe right
-					if (state.lane > -1) state.lane--;
+					if (state.lane < 1) state.lane++;
 				} else {
 					// Swipe left
-					if (state.lane < 1) state.lane++;
+					if (state.lane > -1) state.lane--;
 				}
 			} else {
 				// Vertical swipe (optional, could map up to jump)
